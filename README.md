@@ -1,5 +1,6 @@
+=============================
 NCAA Basketball Stats Scraper
-Updates by Meyappan 
+Author: Updates by Meyappan 
 
 Some formats have changed since Rodrigo recently made this python code. The hyperlink formats have changed so I edited them for that as well as emphasizing the parser to use in Beautiful Soup. 
 
