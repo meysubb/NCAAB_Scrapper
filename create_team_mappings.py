@@ -25,8 +25,9 @@ if (scrapersettings.map_teams == 1):
 
     # Create a mapping for teams
     for link in teamlist_data_soup.find_all('a'): # For each hyperlink on the page
-        if "team/index/" + str(scrapersettings.year_index) + "?org_id=" in link.get('href'): # If the hyperlink contains this string (limiting it only to team pages)
-            team_id = str(link.get('href').split("team/index/" + str(scrapersettings.year_index) + "?org_id=")[1]) # Get the team ID from the URL
+        if "team/index/" and str(scrapersettings.year_index) in link.get('href'): # If the hyperlink contains this string (limiting it only to team pages)
+            team_href = str(link.get('href'))
+	    team_id = team_href.split("/")[2]  # Get the team ID from the URL
             team_name = str(link.get_text()) # Get the text associated with the hyperlink
             team_url = str(scrapersettings.domain_base + link.get('href')) # Get the URL and append the base domain
             team_mappingfile_w.writelines(str(team_id) + "\t" + str(team_name) + "\t" + str(team_url) + "\n") # Add lines to our TSV file for archival purposes
