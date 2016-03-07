@@ -1,4 +1,12 @@
 NCAA Basketball Stats Scraper
+Updates by Meyappan 
+
+Some formats have changed since Rodrigo recently made this python code. The hyperlink formats have changed so I edited them for that as well as emphasizing the parser to use in Beautiful Soup. 
+
+I also added R code to clean up the data. Some of the R code was taken from Rodrigo's old R code. I have updated it for some other new stats like AST/TO ratio, and PER. Unfortunately, to calculate PER you need to account for pace through the accounting of possesions. I was not able to find possession stats on the NCAA website. I also aimed to make the code a bit more efficient, used sapply and apply in general instead of for loops. I hope this helps. 
+
+Version: 1.2 
+
 =============================
 Author: Rodrigo Zamith  
 Version: 1.1
