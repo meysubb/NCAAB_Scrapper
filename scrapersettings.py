@@ -9,8 +9,9 @@
 ##############################################################
 
 # Select year for parsing
-academic_year = "2016" # Set the academic year (2012 refers to 2011-2012 season). As of writing, this can range from 2010 to 2013.
-year_index = "12260" # Set the index that maps to the academic year. This may be obtained from looking at the team URLs on the list of available teams, for the given academic year. As of writing, the [academic_year, year_index] mappings are: [2013, 11220], [2012, 10740], [2011, 10440], and [2010, 10260]
+academic_year = "2017" # Set the academic year (2012 refers to 2011-2012 season). As of writing, this can range from 2010 to 2013.
+year_index = "12480" # Set the index that maps to the academic year. This may be obtained from looking at the team URLs on the list of available teams, for the given academic year. As of writing, the [academic_year, year_index] mappings are: [2013, 11220], [2012, 10740], [2011, 10440], and [2010, 10260]
+yearIndexDict = {"2017":"12480","2016":"12260","2015":"12020","2014":"11540","2013":"11220","2012":"10740","2011":"10440","2010":"10260"}
 
 
 # What do you want to do? (Note: Lower tiers need higher tiers, i.e., ind_game_stats requires map_players (Tier 2), which requires map_teams (Tier 1).)
@@ -38,6 +39,7 @@ team_data = "data/team_data.tsv" # Data file for each team
 #### The variables below could be set, but probably don't need any modification #####
 debugmode = 1 # Output program steps (0 = off, 1 = on)
 params = { } # Any POST parameters that need to be sent (default)
+year_index = yearIndexDict[academic_year]
 http_header = {
             "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0",
             "Accept": "text/plain, */*; q=0.01",

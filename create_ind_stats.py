@@ -51,7 +51,7 @@ if (scrapersettings.ind_game_stats == 1) or (scrapersettings.ind_player_stats ==
         except:
             print "Error getting data. Moving on to next game."
             continue
-        game_page_data_soup = BeautifulSoup(game_page_data)
+        game_page_data_soup = BeautifulSoup(game_page_data,"html.parser")
         neutral = game_mapping[game][3]
         tables = game_page_data_soup.findAll('table', class_='mytable')
         headertable = tables[0]

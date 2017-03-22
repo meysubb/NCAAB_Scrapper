@@ -43,8 +43,12 @@ if (scrapersettings.map_players == 1) or (scrapersettings.summary_players == 1) 
         if scrapersettings.debugmode == 1: print "Processing team " + str(team) + " (" + str(value+1) + " of " + str(len(team_mapping)) + ")"
         roster_url = str(scrapersettings.domain_base) + "/team/" + team + "/stats/" + str(scrapersettings.year_index)
         team_name = team_mapping[team][0]
-        roster_page_data = scraperfunctions.grabber(roster_url, scrapersettings.params, scrapersettings.http_header) # Grab the main page for each team
-        roster_page_data_soup = BeautifulSoup(roster_page_data)
+        try:
+             roster_page_data = scraperfunctions.grabber(roster_url, scrapersettings.params, scrapersettings.http_header) # Grab the main page for each team
+        except:
+             print "Error getting data. Moving on to next game."
+             continue    
+        roster_page_data_soup = BeautifulSoup(roster_page_data,"html.parser")
         stat_grid = roster_page_data_soup.select('#stat_grid')
 
         # Get Player Data

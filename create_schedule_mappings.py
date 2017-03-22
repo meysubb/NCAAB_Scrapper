@@ -32,7 +32,7 @@ if (scrapersettings.map_schedule == 1):
         except:
             print "Error getting data. Moving on to next game."
             continue
-        team_mainpage_data_soup = BeautifulSoup(team_mainpage_data) # Soupify that page
+        team_mainpage_data_soup = BeautifulSoup(team_mainpage_data,"html.parser") # Soupify that page
         gamelinks = [] # Create a blank list for each game
         for link in team_mainpage_data_soup.find_all('a'): # Locate all links in the document
             if "game/index/" in link.get('href'): # If they contain a URL segment suggesting it is a game...
