@@ -4,14 +4,14 @@
 # Version: 1.0
 # By: Rodrigo Zamith
 # License: MPL 2.0 (see LICENSE file in root folder)
-# Additional thanks: 
+# Additional thanks:
 # Refer to http://stats.ncaa.org/team/inst_team_list?sport_code=MBB&division=1 in setting these variables
 ##############################################################
 
 # Select year for parsing
-academic_year = "2017" # Set the academic year (2012 refers to 2011-2012 season). As of writing, this can range from 2010 to 2013.
-year_index = "12480" # Set the index that maps to the academic year. This may be obtained from looking at the team URLs on the list of available teams, for the given academic year. As of writing, the [academic_year, year_index] mappings are: [2013, 11220], [2012, 10740], [2011, 10440], and [2010, 10260]
-yearIndexDict = {"2017":"12480","2016":"12260","2015":"12020","2014":"11540","2013":"11220","2012":"10740","2011":"10440","2010":"10260"}
+academic_year = "2018" # Set the academic year (2012 refers to 2011-2012 season). As of writing, this can range from 2010 to 2013.
+year_index = "12620" # Set the index that maps to the academic year. This may be obtained from looking at the team URLs on the list of available teams, for the given academic year. As of writing, the [academic_year, year_index] mappings are: [2013, 11220], [2012, 10740], [2011, 10440], and [2010, 10260]
+yearIndexDict = {"2018":"12620","2017":"12480","2016":"12260","2015":"12020","2014":"11540","2013":"11220","2012":"10740","2011":"10440","2010":"10260"}
 
 
 # What do you want to do? (Note: Lower tiers need higher tiers, i.e., ind_game_stats requires map_players (Tier 2), which requires map_teams (Tier 1).)
