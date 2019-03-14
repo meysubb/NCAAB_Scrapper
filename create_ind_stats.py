@@ -521,15 +521,17 @@ import dropbox
 import dropbox_token
 dbx = dropbox.Dropbox(dropbox_token.token)
 
-f = open('data/game_data.tsv', 'rb')
-response = dbx.files_upload(f.read(),'/Heroku_NCAA_March_Files/game_data.tsv')
-f.close()
+f3 = open('data/game_data.tsv', 'rb')
+response = dbx.files_upload(f3.read(), 
+'/Heroku_NCAA_March_Files/game_data.tsv', mode=dropbox.files.WriteMode("overwrite"))
+f3.close()
 
-f = open('data/player_data.tsv','rb')
-response = dbx.files_upload(f.read(),'/Heroku_NCAA_March_Files/player_data.tsv')
-f.close()
+f4 = open('data/player_data.tsv','rb')
+response = dbx.files_upload(f4.read(), 
+'/Heroku_NCAA_March_Files/player_data.tsv', mode=dropbox.files.WriteMode("overwrite"))
+f4.close()
 
-f = open('data/team_data.tsv', 'rb')
+f5 = open('data/team_data.tsv', 'rb')
 response = dbx.files_upload(
-    f.read(), '/Heroku_NCAA_March_Files/team_data.tsv')
-f.close()
+    f5.read(), '/Heroku_NCAA_March_Files/team_data.tsv', mode=dropbox.files.WriteMode("overwrite"))
+f5.close()
