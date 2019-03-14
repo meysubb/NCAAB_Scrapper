@@ -28,14 +28,14 @@ ind_team_stats = 1 # Get individual team statistics (a line per team, such that 
 
 
 # Where do you want to save the data?
-team_mappingfile = "app/mappings/team_mappings.tsv" # Data file for team mappings
-player_mappingfile = "app/mappings/player_mappings.tsv" # Data file for player mappings
-schedule_mappingfile = "app/mappings/schedule_mappings.tsv" # Data file for schedule mappings
-summary_player_data = "app/data/summary_player_data.tsv" # Data file for individual player summary statistics
-summary_team_data = "app/data/summary_team_data.tsv" # Data file for team summary statistics
-game_data = "app/data/game_data.tsv" # Data file for each game
-player_data = "app/data/player_data.tsv" # Data file for each player
-team_data = "app/data/team_data.tsv" # Data file for each team
+team_mappingfile = "mappings/team_mappings.tsv" # Data file for team mappings
+player_mappingfile = "mappings/player_mappings.tsv" # Data file for player mappings
+schedule_mappingfile = "mappings/schedule_mappings.tsv" # Data file for schedule mappings
+summary_player_data = "data/summary_player_data.tsv" # Data file for individual player summary statistics
+summary_team_data = "data/summary_team_data.tsv" # Data file for team summary statistics
+game_data = "data/game_data.tsv" # Data file for each game
+player_data = "data/player_data.tsv" # Data file for each player
+team_data = "data/team_data.tsv" # Data file for each team
 
 
 #### The variables below could be set, but probably don't need any modification #####
