@@ -515,3 +515,21 @@ if (scrapersettings.ind_game_stats == 1) or (scrapersettings.ind_player_stats ==
             team_data_w.writelines(writeline)
 
     print "Successfully generated individual statistics for players and/or teams"
+
+
+import dropbox 
+import dropbox_token
+dbx = dropbox.Dropbox(dropbox_token.token)
+
+f = open('data/game_data.tsv', 'rb')
+response = dbx.files_upload(f.read(),'/Heroku_NCAA_March_Files/game_data.tsv')
+f.close()
+
+f = open('data/player_data.tsv','rb')
+response = dbx.files_upload(f.read(),'/Heroku_NCAA_March_Files/player_data.tsv')
+f.close()
+
+f = open('data/team_data.tsv', 'rb')
+response = dbx.files_upload(
+    f.read(), '/Heroku_NCAA_March_Files/team_data.tsv')
+f.close()

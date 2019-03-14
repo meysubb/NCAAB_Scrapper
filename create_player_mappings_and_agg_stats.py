@@ -8,6 +8,8 @@
 ##############################################################
 
 # Import modules and libraries
+import dropbox_token
+import dropbox
 import scraperfunctions
 import scrapersettings
 import csv
@@ -165,3 +167,17 @@ if (scrapersettings.map_players == 1):
     player_dict = dict([(case[0], (case[1:])) for case in player_list]) # Create a dictionary from our list so we don't have any duplicate entries
     for item in player_dict: # For each item on that list
         player_mappingfile_w.writelines(str(item) + "\t" + player_dict[item][1] + "\t" + player_dict[item][0] + "\n")
+
+
+## Save to Dropbox when all is done
+import dropbox 
+import dropbox_token
+dbx = dropbox.Dropbox(dropbox_token.token)
+
+f = open('data/summary_team_data.tsv', 'rb')
+response = dbx.files_upload(f.read(),'/Heroku_NCAA_March_Files/summary_team_data.tsv')
+f.close()
+
+f = open('data/summary_player_data.tsv','rb')
+response = dbx.files_upload(f.read(),'/Heroku_NCAA_March_Files/summary_player_data.tsv')
+f.close()

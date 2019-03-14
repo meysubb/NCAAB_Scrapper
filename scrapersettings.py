@@ -8,9 +8,11 @@
 # Refer to http://stats.ncaa.org/team/inst_team_list?sport_code=MBB&division=1 in setting these variables
 ##############################################################
 
+
+
 # Select year for parsing
-academic_year = "2018" # Set the academic year (2012 refers to 2011-2012 season). As of writing, this can range from 2010 to 2013.
-yearIndexDict = {"2018":"12620","2017":"12480","2016":"12260","2015":"12020","2014":"11540","2013":"11220","2012":"10740","2011":"10440","2010":"10260"}
+academic_year = "2019" # Set the academic year (2012 refers to 2011-2012 season). As of writing, this can range from 2010 to 2013.
+yearIndexDict = {"2019":"14300","2018":"12620","2017":"12480","2016":"12260","2015":"12020","2014":"11540","2013":"11220","2012":"10740","2011":"10440","2010":"10260"}
 year_index = yearIndexDict[academic_year] # Set the index that maps to the academic year. This may be obtained from looking at the team URLs on the list of available teams, for the given academic year. As of writing, the [academic_year, year_index] mappings are: [2013, 11220], [2012, 10740], [2011, 10440], and [2010, 10260]
 
 
