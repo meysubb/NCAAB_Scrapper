@@ -8,7 +8,6 @@
 ##############################################################
 
 # Import modules and libraries
-import dropbox_token
 import dropbox
 import scraperfunctions
 import scrapersettings
