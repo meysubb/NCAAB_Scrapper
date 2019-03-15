@@ -171,8 +171,9 @@ if (scrapersettings.map_players == 1):
 
 ## Save to Dropbox when all is done
 import dropbox 
-import dropbox_token
-dbx = dropbox.Dropbox(dropbox_token.token)
+import os
+token = os.environ['DROPBOX_TOKEN']
+dbx = dropbox.Dropbox(token)
 
 f = open('data/summary_team_data.tsv', 'rb')
 response = dbx.files_upload(f.read(

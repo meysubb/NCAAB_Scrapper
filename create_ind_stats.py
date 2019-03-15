@@ -518,8 +518,9 @@ if (scrapersettings.ind_game_stats == 1) or (scrapersettings.ind_player_stats ==
 
 
 import dropbox 
-import dropbox_token
-dbx = dropbox.Dropbox(dropbox_token.token)
+import os
+token = os.environ['DROPBOX_TOKEN']
+dbx = dropbox.Dropbox(token)
 
 f3 = open('data/game_data.tsv', 'rb')
 response = dbx.files_upload(f3.read(), 
